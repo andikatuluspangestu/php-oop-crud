@@ -15,7 +15,7 @@ Project ini dibuat untuk mengingat materi tentang PHP OOP
 ### 💡 Cara Instalasi
 
 - Download dan Ekstrak **Source Code** ke folder htdocs ( Jika menggunakan XAMPP )
-- Buat Database di phpmyadmin dengan nama : **sekolah**
+- Buat Database di phpmyadmin dengan nama : **db_sekolah**
 - Import file database yang ada di folder `/database`
 - Jalankan file nya dengan akses **localhost/php-crud-oop/**
 

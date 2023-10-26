@@ -5,7 +5,7 @@ class Database{
 	var $host = "localhost";
 	var $user = "root";
 	var $pass = "";
-	var $db   = "sekolah";
+	var $db   = "db_sekolah";
 	var $conn = "";
 	
 	public function getConnection(){
