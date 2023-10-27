@@ -12,10 +12,7 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link" href="../views/v_index.php">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../views/v_add.php">Tambah Data</a>
+                            <a class="nav-link active" href="../views/v_index.php">Home</a>
                         </li>
                     </ul>
                 </div>
