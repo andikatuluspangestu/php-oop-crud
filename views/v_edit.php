@@ -6,7 +6,7 @@ $siswa->getConnection();
 $id = $_GET['id'];
 
 // Pengkondisian - Cek ID NULL
-if($id){
+if ($id) {
     $data = $siswa->pilihData($id);
 } else {
     header("Location: ../views/v_index.php");
@@ -24,8 +24,13 @@ if($id){
     <main>
         <div class="container">
             <div class="card mt-5 p-4">
-                <h5>Ubah Data</h5>
-                <hr>
+                <div class="card-header">
+                    <h5 class="float-start">Edit Data Siswa</h5>
+                    <a href="../views/v_index.php" class="btn btn-sm btn-primary float-end">
+                        <i class="bi bi-arrow-left-circle">&nbsp;</i>
+                        Kembali
+                    </a>
+                </div>
                 <form action="../controllers/Update.php" method="post">
                     <div class="mb-3">
                         <input type="number" value="<?= $data['id_siswa']; ?>" name="id_siswa" class="form-control" id="id_siswa" placeholder="328xxx" hidden>
@@ -43,8 +48,10 @@ if($id){
                         <input value="<?= $data['alamat']; ?>" type="text" name="alamat" class="form-control" id="alamat" placeholder="Masukan alamat lengkap">
                     </div>
                     <div class="mb-3">
-                        <button name="submit" type="submit" class="btn btn-sm btn-success">Submit</button>
-                        <button type="reset" class="btn btn-sm btn-secondary">Reset</button>
+                        <button name="submit" type="submit" class="btn btn-sm btn-primary">
+                            <i class="bi bi-send">&nbsp;</i>Submit
+                        </button>
+                        <button type="reset" class="btn btn-sm btn-danger">Reset</button>
                     </div>
                 </form>
             </div>

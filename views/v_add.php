@@ -9,8 +9,13 @@
     <main>
         <div class="container">
             <div class="card mt-5 p-4">
-                <h5>Tambah Data</h5>
-                <hr>
+                <div class="card-header mb-2">
+                    <h5 class="float-start">Tambah Data Siswa</h5>
+                    <a href="../views/v_index.php" class="btn btn-sm btn-primary float-end">
+                        <i class="bi bi-arrow-left-circle">&nbsp;</i>
+                        Kembali
+                    </a>
+                </div>
                 <form action="../controllers/Add.php" method="post">
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">NISN</label>

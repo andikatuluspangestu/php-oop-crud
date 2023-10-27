@@ -15,4 +15,7 @@ $siswa->getConnection();
 // Query insert data
 $siswa->tambahData($nisn, $nama, $alamat);
 
+// kembalikan ke halaman utama dan krimkan pesan sukses melalui flashdata
+
+
 

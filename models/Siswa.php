@@ -13,9 +13,9 @@ class Siswa extends Database{
         $query = "INSERT INTO siswa (nisn, nama_lengkap, alamat) VALUES ('$nisn','$nama','$alamat')";
         $proses = mysqli_query($this->conn, $query);
         if ($proses) {
-            header("Location: ../views/v_index.php");
+            header("Location: ../views/v_index.php?pesan=Data berhasil ditambahkan");
         } else {
-            echo "Data tidak berhasil ditambahkan";
+            header("Location: ../views/v_index.php?pesan_error=Data gagal ditambahkan");
         }
     }
 
@@ -30,9 +30,9 @@ class Siswa extends Database{
         $proses = mysqli_query($this->conn, $query);
 
         if ($proses) {
-            header("Location: ../views/v_index.php");
+            header("Location: ../views/v_index.php?pesan=Data berhasil ditambahkan");
         } else {
-            echo "Data tidak berhasil diubah";
+            header("Location: ../views/v_index.php?pesan_error=Data gagal ditambahkan");
         }
     }
 
@@ -41,10 +41,16 @@ class Siswa extends Database{
         $proses = mysqli_query($this->conn, $query);
 
         if ($proses) {
-            header("Location: ../views/v_index.php");
+            header("Location: ../views/v_index.php?pesan_hapus=Data berhasil dihapus");
         } else {
-            echo "Data tidak berhasil dihapus";
+            header("Location: ../views/v_index.php?pesan_error=Data gagal dihapus");
         }
+    }
+
+    public function getDetailData($id){
+        $query = "SELECT * FROM siswa WHERE id_siswa = '$id'";
+        $proses = mysqli_query($this->conn, $query);
+        return $proses->fetch_array();
     }
 
 }
